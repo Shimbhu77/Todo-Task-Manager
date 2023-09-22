@@ -2,6 +2,7 @@ package com.app.model;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,6 +31,7 @@ public class Task {
 	
 	private boolean completed;
 	
+	@JsonIgnore
 	@ManyToOne
 	private User user;
 	
